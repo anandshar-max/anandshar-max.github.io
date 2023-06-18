@@ -14,10 +14,9 @@
 /* text css above hero image*/
 .hero_title {
     color: #0a0a0a;
-    font-size: 25px;
+    font-size: 2vw;
     text-transform: uppercase;
     letter-spacing: 5px;
-    display: inline-block;
     margin-bottom: 1px;
     background: linear-gradient(
     120deg,
@@ -31,7 +30,7 @@
 }
 .hero_desc {
     color: white;
-    font-size: 75px;
+    font-size: 6vw;
     font-weight: 800;
     line-height: 80px;
     text-transform: inherit;
@@ -45,11 +44,24 @@
     transform: translate(-50%, -50%);
 }
 
+.about.btn {
+    color: #3b3b3b;
+    font-size: 25px;
+    text-align: left;
+    font-weight: 800;
+    border-radius: 15px;
+    line-height: 30px;
+    text-transform: inherit;
+    width: 11%;
+    background-color: #ffffff;
+}
 
 
 /* about section image css */
 .imageAboutPage {
     width: 100%;
+    display: block;
+    margin-right: 0;
 }
 
 .mt-4.row {
@@ -60,11 +72,43 @@
 
 /* services section css */
 .servicesText.card {
-    height: 200px;
+    height: 150px;
     cursor: pointer;
     text-align: justify;
     text-justify: inter-word;
+    border-radius: 15px;
   }
+.imageKPMG {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40mm;
+}
+.imageSamsung {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75mm;
+}
+.imageMondelez {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38mm;
+}
+.imageFMS {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38mm;
+}
+.imageJEC {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15mm;
+}
+
 .servicesIcon {
     font-size: 36px;
     text-align: center;
@@ -82,7 +126,7 @@
 
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: rgb(46, 46, 46);
+    background-color: #012730;
 }
 
 /* social media icons styling */
@@ -94,7 +138,7 @@
     color: #008000;
 }
 .fab {
-    color: #3b3b3b;
+    color: #012730;
 }
 /* footer styling */
 #footer {
@@ -103,9 +147,11 @@
 }
 
 /* spacing on all sections */
-#about, #services, #portfolio, #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
+#about, #experience, #education, #portfolio, #contact {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 #contact {
     padding-bottom: 4rem;

@@ -1,28 +1,17 @@
-
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* Reset & Base */
-* {
+/* Ensure no horizontal overflow */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-html, body {
+  overflow-x: hidden;
   font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
   color: #444;
   background-color: #f2f2f2;
   scroll-behavior: smooth;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s;
-}
-a:hover {
-  color: #ff9800;
-}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* Utility */
 .container {
@@ -54,11 +43,17 @@ header h1 {
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 1px;
+  margin: 0;
 }
 nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: 0;
 }
 nav li a {
   color: #e0e0e0;
@@ -89,7 +84,7 @@ nav li a:hover::after {
       rgba(27, 38, 44, 0.7),
       rgba(27, 38, 44, 0.7)
     ),
-    url("https://source.unsplash.com/1400x500/?hotel,luxury") center/cover no-repeat;
+    url("https://dummyimage.com/1400x500/cccccc/000000&text=Hotel+Luxury") center/cover no-repeat;
 }
 .hero .hero-text {
   position: absolute;
@@ -210,16 +205,18 @@ footer .container {
 footer h4 {
   font-weight: 600;
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 footer p, footer a {
   color: #b0bec5;
   font-size: 0.9rem;
+  margin: 0.25rem 0;
 }
 footer a:hover {
   color: #fff;
 }
 
-/* Responsive */
+/* Responsive Breakpoints */
 @media (max-width: 1024px) {
   section .container {
     flex-direction: column;
@@ -235,7 +232,7 @@ footer a:hover {
   html, body {
     font-size: 14px;
   }
-  hero {
+  .hero {
     height: 300px;
   }
   .hero h2 {

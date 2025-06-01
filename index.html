@@ -1,329 +1,221 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Anand Sharma</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- linking css file -->
-  <link rel="stylesheet" href="style.css">
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Revenue Management</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+
+  <!-- Header & Navigation -->
+  <header>
     <div class="container">
-        <a class="navbar-brand" href="#">ANAND SHARMA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home" style="color: #ffffff"><b>HOME</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" style="color: #ffffff"><b>ABOUT</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services" style="color: #ffffff"><b>EXPERIENCE</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio" style="color: #ffffff"><b>PORTFOLIO</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact" style="color: #ffffff"><b>CONTACT</b></a>
-                </li>
-            </ul>
-            
-        </div>
+      <h1>RevMaxPro</h1>
+      <nav>
+        <ul>
+          <li><a href="#pricing">Dynamic Pricing</a></li>
+          <li><a href="#forecast">Forecasting</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#distribution">Distribution</a></li>
+          <li><a href="#promotions">Promotions</a></li>
+          <li><a href="#upsell">Upselling</a></li>
+          <li><a href="#ancillary">Ancillary</a></li>
+          <li><a href="#loyalty">Loyalty</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
- <!-- main banner -->
- <section class="bgimage" id="home">
-    <div class="container-fluid">
-        <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-            <h2 class="hero_title">Senior Consultant - Value Creation Practice</h2>
-            <p class="hero_desc">HI, I'M ANAND SHARMA</p>
-            <a href="#about" class="btn btn-success">ABOUT.ME</a>
-        </div>
+  </header>
 
-        </div>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-text container">
+      <h2>Elevate Your Hotel Revenue</h2>
+      <p>Unlock advanced tactics, data insights, and dynamic strategies to maximize RevPAR.</p>
+      <a href="#pricing" class="button">Explore Levers</a>
     </div>
-</section>
-
-    <!-- about section-->
-    <section id="about">
-      <div class="container mt-4 pt-4">
-          <h1 class="text-center" style="color:#012730;"><b>ABOUT.ME</b></h1>
-          <div class="row mt-4">
-              <div class="col-lg-4">
-                  <img src="images/about.jpg" class= "imageAboutPage" alt="" style="padding-bottom: 20px;">
-              </div>
-
-              <div class="col-lg-8">
-                  <p> We are all, to some degree, the products of our environment. Modeling social situations to help nurture businesses, 
-                      through proper management motivated me, and I decided to take up a career in business management. Currently, I work 
-                      as a senior consultant @KPMG with a demonstrated history of working across sectors.  
-                  </p>
-                  <div class="row mt-3">
-                      <div class="col-lg-12">
-                          <ul>
-                              <li><b>Sectors Worked: E-commerce | Consumer Electronics | Pharmaceuticals | Power & Utility</b></li>
-                              <li><b>Skills: Growth strategy | Business transformation | Value creation | Operational diligence</b></li>
-                          </ul>
-                      </div>
-                     <!--
-                      <div class="col-md-6">
-                          <ul>
-                              <li>Experience</li>
-                              <li>KPMG India Services LLP</li>
-                              <li>Samsung India Electronics Limited</li>
-
-                          </ul>
-                      </div> -->
-                  </div>
-                  <div class="row mt-3">
-                        <p> 
-                          I've equally experienced handling some of the most iconic products, while working as a category manager (online) 
-                          @Samsung. I spearheaded a complete online smartwatches & personal audio portfolio (all portals) & marketplace 
-                          sellers including (Smartphones, Tablets, Wearables & Audio) for Samsung India.
-                        </p>
-                        <p>    
-                          I've a masters degree in Business Administration (MBA - Marketing & IT) from Faculty of Management Studies, Delhi
-                          University in 2021. I graduated with an Electronics & Telecommunication Degree from Jabalpur Engineering College 
-                          in 2019. 
-                        </p>
-                        <p>National Winner @Go-Kart Design | National Finalist @Reliance TUP 5.0 | PPI Offers: Mondelez, Reliance</p>
-                        <p></p>
-                        <p><b>
-                          Disclaimer: All views expressed are my own.
-                        </b></p>
-  
-                  </div>
-              </div>
-          </div>
   </section>
-  <hr>
-  <!-- experience section-->
-  <section id="experience">
+
+  <!-- Dynamic Pricing -->
+  <section id="pricing">
     <div class="container">
-        <h1 class="text-center" style="color: #012730;"><b>EXPERIENCE</b></h1>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <img src="images/KPMG_logo.jpg" class= "imageKPMG" alt="">
-                        <h4 class="card-title mt-3">Senior Consultant - Value Creation</h4>
-                        <p class="card-text mt-3"></p>
-                    </div>
-                </div>  
-            </div>
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <img src="images/Samsung_logo.jpg" class= "imageSamsung" alt="">
-                        <h4 class="card-title mt-3">Category Manager - Wearables</h4>
-                        <p class="card-text mt-3"></p>
-                    </div>
-                </div>  
-            </div>
+      <div class="content">
+        <h3>Dynamic Pricing</h3>
+        <p>
+          Adjust rates in real-time based on demand signals, competitor insights, and event calendars. 
+          Implement AI-driven algorithms for optimal rate recommendations.
+        </p>
+      </div>
+      <img
+        src="https://source.unsplash.com/800x600/?data,algorithm"
+        alt="Dynamic Pricing Graph"
+      />
+    </div>
+  </section>
 
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <img src="images/Samsung_logo.jpg" class= "imageSamsung" alt="">
-                        <h4 class="card-title mt-3">Category Manager - Accessories</h4>
-                        <p class="card-text mt-3"></p>
-                    </div>
-                </div>  
-            </div>
-        </div>
-    </section>
-    <hr>
-<!-- education section-->
-<section id="education">
+  <!-- Demand Forecasting -->
+  <section id="forecast">
     <div class="container">
-        <h1 class="text-center" style="color: #012730;"><b>EDUCATION</b></h1>
-  
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <img src="images/MDLZ_logo.jpg" class= "imageMondelez" alt="">
-                        <h4 class="card-title mt-3">Marketing Intern</h4>
-                        <p class="card-text mt-3"></p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <img src="images/FMS_logo.jpg" class= "imageFMS" alt="">
-                        <h4 class="card-title mt-3">M. B. A. (Marketing, IT)</h4>
-                        <p class="card-text mt-3"></p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <img src="images/JEC_logo.jpg" class= "imageJEC" alt="">
-                        <h4 class="card-title mt-3">B. E. (Electronics & Comm.)</h4>
-                        <p class="card-text mt-3"></p>
-                    </div>
-                </div>  
-            </div>
-        </div>
-    </div>
-  </section>
-  <hr>
-  <!-- portfolio section-->
-  <section id="portfolio">
-    <div class="container mt-3">
-        <h1 class="text-center" style="color: #012730;"><b>PORTFOLIO</b></h1>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card">
-                    <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Future of Venture Capital</h4>
-                        <p class="card-text">Algorithms powering the gatekeepers of new technology.</p>
-                        <div class="text-center">
-                            <a href="APACarticle.html" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Quiz App</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Product Landing Page</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Messaging Service</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Twitter Clone</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Blog App</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-  </section>
-  <hr>
-
--->
-  <!-- contact section-->
-  <section id="contact">
-    <div class="container mt-3 contactContent">
-        <h1 class="text-center" style="color: #012730"><b>CONTACT ME</b></h1>
-
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
-                  <div id="embed-map-display" style="height:100%; width:100%;max-width:100%;">
-                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Gurgaon,+Haryana,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-                    </iframe>
-                  </div>
-                  <a class="embed-map-html" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="authorize-map-data">premium bootstrap themes</a>
-                  <style>#embed-map-display img{max-height:none;max-width:none!important;background:none!important;}
-                  </style>
-                </div>
-            </div>
-
-            <div class="col-lg-6" style="padding-top: 20px;">
-                <!-- form fields -->
-                <form>
-                    <input type="text" class="form-control form-control-lg" placeholder="Name">
-                    <input type="email" class="form-control mt-3" placeholder="Email">
-                    <input type="text" class="form-control mt-3" placeholder="Subject">
-                    <div class="mb-3 mt-3">
-                        <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
-                    </div>
-                </form>
-                <button type="button" class="btn btn-success mt-3">Contact Me</button>
-                
-            </div>
-
-        </div>
+      <img
+        src="https://source.unsplash.com/800x600/?forecast,analysis"
+        alt="Demand Forecasting"
+      />
+      <div class="content">
+        <h3>Demand Forecasting</h3>
+        <p>
+          Leverage historical curves, seasonality, and market intelligence to predict occupancy 
+          and revenue. Use predictive analytics to staff smartly and avoid revenue leakage.
+        </p>
+      </div>
     </div>
   </section>
 
-   <!-- footer section-->
-   <footer id="footer">
-    <div class="container-fluid">
-        <!-- social media icons -->
-        <div class="social-icons mt-4">
-          <!--  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a> -->
-            <a href="https://www.instagram.com/anandsharma_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitter.com/AnandSharma9A" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/anandsharma-" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <!--  <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a> -->
-        </div>
+  <!-- Inventory & Overbooking -->
+  <section id="inventory">
+    <div class="container">
+      <div class="content">
+        <h3>Inventory & Overbooking</h3>
+        <p>
+          Optimize room allocation by segment and length of stay. Strategically overbook based on 
+          no-show forecasts, minimizing walk risks while capturing full occupancy.
+        </p>
+      </div>
+      <img
+        src="https://source.unsplash.com/800x600/?hotel,rooms"
+        alt="Hotel Rooms Inventory"
+      />
+    </div>
+  </section>
+
+  <!-- Distribution & Channel Management -->
+  <section id="distribution">
+    <div class="container">
+      <img
+        src="https://source.unsplash.com/800x600/?distribution,channel"
+        alt="Channel Management"
+      />
+      <div class="content">
+        <h3>Distribution & Channel Management</h3>
+        <p>
+          Balance your channel mix—OTAs, GDS, direct website—while enforcing rate parity. 
+          Reduce OTAs commission drag by steering loyal guests to direct booking channels.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotions & Packages -->
+  <section id="promotions">
+    <div class="container">
+      <div class="content">
+        <h3>Promotions & Packages</h3>
+        <p>
+          Drive incremental revenue through creative packages: weekend getaways, dining credits, 
+          spa experiences, and seasonal offers. Track ROI by promo codes for better spend allocation.
+        </p>
+      </div>
+      <img
+        src="https://source.unsplash.com/800x600/?promotion,marketing"
+        alt="Promotions & Packages"
+      />
+    </div>
+  </section>
+
+  <!-- Upselling & Cross-selling -->
+  <section id="upsell">
+    <div class="container">
+      <img
+        src="https://source.unsplash.com/800x600/?upsell,hotel"
+        alt="Upselling & Cross-selling"
+      />
+      <div class="content">
+        <h3>Upselling & Cross-selling</h3>
+        <p>
+          At booking, pre-arrival, and check-in, offer room upgrades, late check-outs, 
+          or F&B add-ons. Equip staff with targeted scripts and leverage POS data for precision.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ancillary Services -->
+  <section id="ancillary">
+    <div class="container">
+      <div class="content">
+        <h3>Ancillary Services</h3>
+        <p>
+          Boost per-guest spend with F&B outlets, spa treatments, transportation, and event spaces. 
+          Partner locally for exclusive experiences (e.g., guided tours, culinary classes).
+        </p>
+      </div>
+      <img
+        src="https://source.unsplash.com/800x600/?spa,restaurant"
+        alt="Ancillary Services"
+      />
+    </div>
+  </section>
+
+  <!-- Loyalty & Retention Programs -->
+  <section id="loyalty">
+    <div class="container">
+      <img
+        src="https://source.unsplash.com/800x600/?loyalty,program"
+        alt="Loyalty & Retention"
+      />
+      <div class="content">
+        <h3>Loyalty & Retention</h3>
+        <p>
+          Design a tiered loyalty program with exclusive perks, points, and members-only rates. 
+          Engage guests through personalized email journeys and retarget free night offers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Revenue Analytics & Reporting -->
+  <section id="analytics">
+    <div class="container">
+      <div class="content">
+        <h3>Revenue Analytics & Reporting</h3>
+        <p>
+          Monitor real-time KPIs—RevPAR, ADR, Occupancy, GOP. Build interactive dashboards 
+          for root-cause variance analysis and rapid strategy pivots.
+        </p>
+      </div>
+      <img
+        src="https://source.unsplash.com/800x600/?analytics,report"
+        alt="Revenue Analytics"
+      />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>
+        <h4>RevMaxPro</h4>
+        <p>123 Hospitality Way<br/>Mumbai, India</p>
+        <p>Email: support@revmaxpro.com<br/>Phone: +91-22-1234-5678</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#pricing">Dynamic Pricing</a></li>
+          <li><a href="#forecast">Forecasting</a></li>
+          <li><a href="#distribution">Distribution</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <p>
+          <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a>
+        </p>
+      </div>
     </div>
   </footer>
-    <!-- load javascript after loading all html content -->
-    <script src="script/script.js"></script>
+
 </body>
 </html>

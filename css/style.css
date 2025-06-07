@@ -28,7 +28,7 @@ a:hover {
 /* Utility */
 .container {
   width: 90%;
-  max-width: 75rem;      /* 1200px */
+  max-width: 75rem;   /* 1200px */
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
@@ -46,21 +46,21 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.2);
 }
 header .container {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
-  position: relative;    /* for hamburger positioning */
+  position: relative;
 }
 header h1 {
-  font-size: 1.75rem;    /* ~28px */
+  font-size: 1.75rem;  /* ~28px */
   font-weight: 700;
   letter-spacing: 0.0625rem;
 }
 
-/* Hamburger (hidden by default) */
+/* Hamburger */
 .nav-toggle {
   display: none;
 }
@@ -71,6 +71,7 @@ header h1 {
   width: 2rem;
   height: 1.5rem;
   cursor: pointer;
+  z-index: 200;
 }
 .hamburger span {
   display: block;
@@ -79,7 +80,7 @@ header h1 {
   border-radius: 2px;
 }
 
-/* Navigation Links */
+/* Desktop nav */
 nav ul {
   list-style: none;
   display: flex;
@@ -109,7 +110,7 @@ nav li a:hover::after {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 31.25rem;  /* 500px */
+  height: 31.25rem; /* 500px */
   background:
     linear-gradient(rgba(27,38,44,0.7), rgba(27,38,44,0.7)),
     url("https://source.unsplash.com/1400x500/?hotel,luxury")
@@ -215,39 +216,40 @@ footer a:hover {
   color: #fff;
 }
 
-/* Responsive & Hamburger Menu */
+/* Responsive & Slide-in Hamburger Menu */
 @media (max-width: 48rem) { /* 768px */
-  /* Show hamburger, hide normal nav */
+  /* show hamburger */
   .hamburger {
     display: flex;
   }
+
+  /* slide-in panel */
   nav ul {
-    display: none;
     flex-direction: column;
-    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    max-width: 20rem;
     background: #1b262c;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    max-width: 20rem; /* 320px */
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    gap: 1.5rem;
   }
-  /* Toggle nav display when checked */
+  /* when checked, slide in */
   .nav-toggle:checked ~ nav ul {
-    display: flex;
+    transform: translateX(0);
   }
 
-  /* Stack all containers vertically */
+  /* stack & center containers */
   header .container,
   footer .container,
   section .container {
     flex-direction: column;
     text-align: center;
-  }
-  nav ul {
-    width: auto;
   }
   section img {
     max-width: 100%;

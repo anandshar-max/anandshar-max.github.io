@@ -1,3 +1,9 @@
+/* css/style.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* CSS Variables */
 :root {
   --primary: #1b262c;
   --accent: #ff9800;
@@ -8,8 +14,12 @@
   --radius: 0.75rem;
   --spacing: 1rem;
 }
+
+/* Reset & Base */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html, body {
   overflow-x: hidden;
@@ -20,118 +30,227 @@ html, body {
   scroll-behavior: smooth;
   font-size: 100%;
 }
-a { text-decoration: none; color: inherit; transition: color .3s;}
-a:hover { color: var(--accent); }
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color .3s;
+}
+a:hover {
+  color: var(--accent);
+}
 
-/* Containers */
+/* Utility */
 .container {
-  width: 90%; max-width: 75rem;
+  width: 90%;
+  max-width: 75rem;
   margin: 0 auto;
   padding: var(--spacing) 0;
 }
-.header-container { display:flex; align-items:center; justify-content:space-between; position:relative; }
-.hero-text { max-width: 30rem; margin: auto; }
+.center {
+  text-align: center;
+}
 
-/* Header */
-header { background: var(--primary); color: var(--white); position:sticky; top:0; z-index:100;
+/* Header & Navigation */
+header {
+  background: var(--primary);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.logo { font-size: clamp(1.5rem,4vw,2rem); }
-.nav-list { display:flex; gap: var(--spacing); list-style:none; }
-.nav-list a { padding:.25rem .5rem; font-weight:500; font-size:clamp(.8rem,2vw,1rem); position:relative;}
-.nav-list a::after { content:''; position:absolute; width:0; height:2px; background:var(--accent); bottom:-2px; left:0; transition:width .3s;}
-.nav-list a:hover::after{width:100%;}
-
-/* Hamburger */
-.nav-toggle { display:none; }
-.hamburger {
-  display:none; flex-direction:column; justify-content:space-between;
-  width:1.75rem; height:1.25rem; cursor:pointer; z-index:200;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
-.hamburger span{height:2px; background:var(--white); border-radius:1px;}
+.logo {
+  font-size: clamp(1.5rem,4vw,2rem);
+  font-weight: 700;
+}
+.nav-list {
+  display: flex;
+  gap: var(--spacing);
+  list-style: none;
+}
+.nav-list a {
+  padding: .25rem .5rem;
+  font-weight: 500;
+  font-size: clamp(.8rem,2vw,1rem);
+  position: relative;
+}
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  bottom: -2px;
+  left: 0;
+  transition: width .3s;
+}
+.nav-list a:hover::after {
+  width: 100%;
+}
 
-/* Hero */
+/* Hamburger Toggle */
+.nav-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.75rem;
+  height: 1.25rem;
+  cursor: pointer;
+  z-index: 200;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--white);
+  border-radius: 1px;
+}
+
+/* Hero Section */
 .hero {
   height: clamp(15rem,30vw,25rem);
   background:
-    linear-gradient(rgba(27,38,44,.7),rgba(27,38,44,.7)),
+    linear-gradient(rgba(27,38,44,.7), rgba(27,38,44,.7)),
     url("HeroHotel.jpeg") center/cover no-repeat;
-  display:flex; align-items:center; justify-content:center; text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-text {
+  max-width: 30rem;
+  margin: auto;
 }
 .hero h2 {
   font-size: clamp(1.75rem,5vw,2.5rem);
-  margin-bottom:.5rem; color:var(--white);
+  margin-bottom: .5rem;
+  color: var(--white);
 }
-.hero p { font-size: clamp(.9rem,2vw,1.1rem); margin-bottom:1rem; }
+.hero p {
+  font-size: clamp(.9rem,2vw,1.1rem);
+  margin-bottom: var(--spacing);
+}
 .button {
-  background:var(--accent); color:#fff; padding:.5rem 1rem; border-radius:2rem;
-  font-weight:600; transition:transform .2s;
+  background: var(--accent);
+  color: var(--white);
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: transform .2s;
 }
-.button:hover { transform:translateY(-2px); }
+.button:hover {
+  transform: translateY(-2px);
+}
 
-/* Cards */
-.card {
+/* Services Section */
+.services {
+  padding: calc(var(--spacing) * 1.5) 0;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing);
+}
+.service-card {
   background: var(--white);
-  margin-block: var(--spacing);
   border-radius: var(--radius);
-  overflow:hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition:transform .3s, box-shadow .3s;
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  flex-direction: column;
 }
-.card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 8px 24px rgba(0,0,0,0.1);
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
-.alt-bg { background: var(--bg-light); }
-
-/* Card Content */
-.card-content {
-  display:flex; align-items:center; gap:var(--spacing);
-  flex-wrap: wrap; padding: calc(var(--spacing)*1.5);
+.service-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
 }
-.card-content.reverse { flex-direction: row-reverse; }
-
-/* Text & Image */
-.card-content .text { flex:1 1 18rem; }
-.card-content h3 {
-  font-size: clamp(1.25rem,3vw,1.75rem);
-  margin-bottom:.5rem; color:var(--primary);
+.service-card h3 {
+  font-size: clamp(1.1rem,2.5vw,1.5rem);
+  margin: var(--spacing) var(--spacing) .25rem;
+  color: var(--primary);
 }
-.card-content p {
-  font-size: clamp(.95rem,2vw,1.05rem);
-  margin-bottom:1rem;
-}
-.card-content img {
-  flex:1 1 12rem; max-width:100%;
-  border-radius: var(--radius);
-  object-fit:cover;
+.service-card p {
+  font-size: clamp(.9rem,2vw,1rem);
+  margin: 0 var(--spacing) var(--spacing);
+  color: var(--text);
 }
 
 /* Footer */
 footer {
-  background: var(--primary); color:var(--white);
+  background: var(--primary);
+  color: var(--white);
   padding: var(--spacing) 0;
 }
 .footer-container {
-  display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--spacing);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing);
 }
-.footer-block h4 { margin-bottom:.5rem; }
-.footer-block p, .footer-block a { font-size:.85rem; color:#cfd8dc; }
-.footer-block ul { list-style:none; padding:0; }
-.footer-block li { margin:.25rem 0; }
+.footer-block h4 {
+  margin-bottom: .5rem;
+}
+.footer-block p,
+.footer-block a {
+  font-size: .85rem;
+  color: #cfd8dc;
+}
+.footer-block ul {
+  list-style: none;
+}
+.footer-block li {
+  margin: .25rem 0;
+}
 
-/* Responsive */
+/* Mobile & Responsive */
 @media (max-width: 48rem) {
-  .hamburger { display:flex; position:absolute; top:var(--spacing); right:var(--spacing); }
-  header { padding-inline: var(--spacing); }
-  .nav-list {
-    flex-direction:column;
-    position:fixed; top:0; right:0; height:100vh;
-    width:75%; max-width:18rem; background:var(--primary);
-    padding:3rem 1rem; transform:translateX(100%);
-    transition:transform .3s ease;
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: var(--spacing);
+    right: var(--spacing);
   }
-  .nav-toggle:checked ~ nav .nav-list { transform:translateX(0); }
-  .header-container, .footer-container, .card-content { flex-direction:column; text-align:center;}
-  .card-content.reverse { flex-direction:column; }
+  header {
+    padding-inline: var(--spacing);
+  }
+  nav .nav-list {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 75%;
+    max-width: 18rem;
+    background: var(--primary);
+    padding: 3rem 1rem;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+  }
+  .nav-toggle:checked ~ nav .nav-list {
+    transform: translateX(0);
+  }
+  .header-container,
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services .container {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    text-align: center;
+  }
 }

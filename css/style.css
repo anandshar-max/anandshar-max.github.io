@@ -49,7 +49,7 @@ header {
   box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.2);
 }
 header .container {
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   padding: 1rem 0;
   position: relative;
@@ -72,12 +72,13 @@ header h1 {
   height: 1.5rem;
   cursor: pointer;
   z-index: 100;
+  align-items: right;
 }
 .hamburger span {
   display: block;
   height: 0.25rem;
   background: #e0e0e0;
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 /* Desktop nav */
@@ -110,25 +111,25 @@ nav li a:hover::after {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 25.00rem; /* 500px */
+  height: 20.00rem; /* 500px */
   background:
     linear-gradient(rgba(27,38,44,0.7), rgba(27,38,44,0.7)),
-    url("https://source.unsplash.com/1400x500/?hotel,luxury")
+    url("HeroHotel.jpeg")
     center/cover no-repeat;
 }
 .hero .hero-text {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: #fff;
   text-align: center;
-  padding: 0 1rem;
 }
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   letter-spacing: 0.125rem;
+  color: #fff;  
 }
 .hero p {
   font-size: 1rem;
@@ -148,7 +149,7 @@ section:hover {
   box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.1);
 }
 section img {
-  width: 100%;
+  width: 80%;
   max-width: 25.00rem;
   border-radius: 0.5rem;
   transition: transform 0.3s;
@@ -157,10 +158,10 @@ section img:hover {
   transform: scale(1.05);
 }
 section .content {
-  flex: 1 1 28.125rem;
+  flex: 1 1 20rem;
 }
 section h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #1b262c;
 }
@@ -201,7 +202,7 @@ footer {
 }
 footer .container {
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1.0rem;
 }
 footer h4 {
   font-weight: 600;

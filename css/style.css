@@ -71,7 +71,7 @@ header h1 {
   width: 2rem;
   height: 1.5rem;
   cursor: pointer;
-  z-index: 200;
+  z-index: 100;
 }
 .hamburger span {
   display: block;
@@ -110,7 +110,7 @@ nav li a:hover::after {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 31.25rem; /* 500px */
+  height: 25.00rem; /* 500px */
   background:
     linear-gradient(rgba(27,38,44,0.7), rgba(27,38,44,0.7)),
     url("https://source.unsplash.com/1400x500/?hotel,luxury")
@@ -149,7 +149,7 @@ section:hover {
 }
 section img {
   width: 100%;
-  max-width: 31.25rem;
+  max-width: 25.00rem;
   border-radius: 0.5rem;
   transition: transform 0.3s;
 }
@@ -217,7 +217,7 @@ footer a:hover {
 }
 
 /* Responsive & Slide-in Hamburger Menu */
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 40rem) { /* 768px */
   /* show hamburger */
   .hamburger {
     display: flex;

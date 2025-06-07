@@ -13,7 +13,7 @@
     <div class="container">
       <h1>RevMaxPro</h1>
 
-      <!-- Hamburger toggle for mobile -->
+      <!-- Hamburger toggle -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="hamburger">
         <span></span>
@@ -198,5 +198,36 @@
     </div>
   </footer>
 
+  <script>
+    // Grab elements
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.querySelectorAll('nav ul li a');
+    const navPanel  = document.querySelector('nav ul');
+
+    // 1) Hide on vertical scroll
+    window.addEventListener('scroll', () => {
+      if (navToggle.checked) navToggle.checked = false;
+    });
+
+    // 2) Hide on any link click
+    navLinks.forEach(link =>
+      link.addEventListener('click', () => navToggle.checked = false)
+    );
+
+    // 3) Detect swipe-right on the nav panel
+    let startX = null;
+    navPanel.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    });
+    navPanel.addEventListener('touchmove', e => {
+      if (startX !== null) {
+        let dx = e.touches[0].clientX - startX;
+        if (dx > 50) {                
+          navToggle.checked = false;
+          startX = null;
+        }
+      }
+    });
+  </script>
 </body>
 </html>

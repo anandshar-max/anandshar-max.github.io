@@ -8,13 +8,13 @@
   box-sizing: border-box;
 }
 html, body {
-  overflow-x: hidden;              /* kill horizontal scroll */
+  overflow-x: hidden;
   font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
   color: #444;
   background-color: #f2f2f2;
   scroll-behavior: smooth;
-  font-size: 100%;                 /* 1rem = browser default (usually 16px) */
+  font-size: 100%;
 }
 a {
   text-decoration: none;
@@ -28,11 +28,11 @@ a:hover {
 /* Utility */
 .container {
   width: 90%;
-  max-width: 75rem;                /* 1200px */
+  max-width: 75rem;      /* 1200px */
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
-  flex-wrap: wrap;                 /* allow wrapping */
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .center {
@@ -52,16 +52,37 @@ header .container {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;    /* for hamburger positioning */
 }
 header h1 {
-  font-size: 1.75rem;              /* ~28px */
+  font-size: 1.75rem;    /* ~28px */
   font-weight: 700;
-  letter-spacing: 0.0625rem;       /* 1px */
+  letter-spacing: 0.0625rem;
 }
+
+/* Hamburger (hidden by default) */
+.nav-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 0.25rem;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+/* Navigation Links */
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
 }
 nav li a {
@@ -69,15 +90,15 @@ nav li a {
   font-weight: 500;
   padding: 0.5rem 0.75rem;
   position: relative;
-  font-size: 1rem;                 /* ~16px */
+  font-size: 1rem;
 }
 nav li a::after {
   content: '';
   position: absolute;
   width: 0%;
-  height: 0.125rem;                /* 2px */
+  height: 0.125rem;
   background: #ff9800;
-  bottom: -0.25rem;                /* -4px */
+  bottom: -0.25rem;
   left: 0;
   transition: width 0.3s;
 }
@@ -88,9 +109,9 @@ nav li a:hover::after {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 31.25rem;                /* 500px */
+  height: 31.25rem;  /* 500px */
   background:
-    linear-gradient(rgba(27, 38, 44, 0.7), rgba(27, 38, 44, 0.7)),
+    linear-gradient(rgba(27,38,44,0.7), rgba(27,38,44,0.7)),
     url("https://source.unsplash.com/1400x500/?hotel,luxury")
     center/cover no-repeat;
 }
@@ -98,39 +119,36 @@ nav li a:hover::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   color: #fff;
   text-align: center;
   padding: 0 1rem;
 }
 .hero h2 {
-  font-size: 2.5rem;               /* ~40px */
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.125rem;        /* 2px */
+  letter-spacing: 0.125rem;
 }
 .hero p {
-  font-size: 1rem;                 /* ~16px */
+  font-size: 1rem;
 }
 
 /* Section Styles */
 section {
   background-color: #fff;
   margin: 3rem 0;
-  border-radius: 0.5rem;           /* 8px */
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 section:hover {
-  transform: translateY(-0.3125rem); /* -5px */
+  transform: translateY(-0.3125rem);
   box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.1);
-}
-section .container {
-  padding: 2.5rem;
 }
 section img {
   width: 100%;
-  max-width: 31.25rem;             /* 500px */
+  max-width: 31.25rem;
   border-radius: 0.5rem;
   transition: transform 0.3s;
 }
@@ -138,15 +156,15 @@ section img:hover {
   transform: scale(1.05);
 }
 section .content {
-  flex: 1 1 28.125rem;             /* ~450px */
+  flex: 1 1 28.125rem;
 }
 section h3 {
-  font-size: 2rem;                 /* ~32px */
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: #1b262c;
 }
 section p {
-  font-size: 1.05rem;              /* ~16.8px */
+  font-size: 1.05rem;
   margin-bottom: 1.25rem;
   color: #555;
 }
@@ -157,26 +175,22 @@ section p {
   background-color: #ff9800;
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 1.875rem;         /* 30px */
+  border-radius: 1.875rem;
   font-weight: 600;
   font-size: 1rem;
   transition: background 0.3s, transform 0.3s;
 }
 .button:hover {
   background-color: #e68900;
-  transform: translateY(-0.125rem); /* -2px */
+  transform: translateY(-0.125rem);
 }
 
 /* Alternate Section Backgrounds */
-#forecast {
-  background-color: #f9f9f9;
-}
-#distribution {
-  background-color: #f9f9f9;
-}
+#forecast,
+#distribution,
 #loyalty {
   background-color: #f9f9f9;
-}  /* <-- added missing brace */
+}
 
 /* Footer */
 footer {
@@ -191,18 +205,41 @@ footer .container {
 footer h4 {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  font-size: 1.125rem;             /* ~18px */
+  font-size: 1.125rem;
 }
 footer p, footer a {
   color: #b0bec5;
-  font-size: 0.9rem;               /* ~14px */
+  font-size: 0.9rem;
 }
 footer a:hover {
   color: #fff;
 }
 
-/* Responsive Breakpoint */
-@media (max-width: 48rem) {        /* 768px */
+/* Responsive & Hamburger Menu */
+@media (max-width: 48rem) { /* 768px */
+  /* Show hamburger, hide normal nav */
+  .hamburger {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #1b262c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 20rem; /* 320px */
+  }
+  /* Toggle nav display when checked */
+  .nav-toggle:checked ~ nav ul {
+    display: flex;
+  }
+
+  /* Stack all containers vertically */
   header .container,
   footer .container,
   section .container {
@@ -210,8 +247,7 @@ footer a:hover {
     text-align: center;
   }
   nav ul {
-    flex-direction: column;
-    gap: 1rem;
+    width: auto;
   }
   section img {
     max-width: 100%;

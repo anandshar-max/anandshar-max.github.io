@@ -2,57 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ancillary Services • RevMaxPro</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo">RevMaxPro</a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
-      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+      <label for="nav-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
       <nav>
         <ul class="nav-list">
-          <li><a href="dynamic-pricing.html">Pricing</a></li>
-          <li><a href="demand-forecasting.html">Forecast</a></li>
-          <li><a href="inventory-overbooking.html">Inventory</a></li>
-          <li><a href="distribution-channel-management.html">Distribution</a></li>
-          <li><a href="promotions-packages.html">Promos</a></li>
-          <li><a href="upselling-cross-selling.html">Upsell</a></li>
-          <li><a href="ancillary-services.html">Ancillary</a></li>
-          <li><a href="loyalty-retention.html">Loyalty</a></li>
-          <li><a href="analytics-reporting.html">Analytics</a></li>
+          <li><a href="dynamic-pricing.html">Dynamic Pricing</a></li>
+          <li><a href="demand-forecasting.html">Demand Forecasting</a></li>
+          <li><a href="inventory-overbooking.html">Inventory &amp; Overbooking</a></li>
+          <li><a href="distribution-channel-management.html">Distribution &amp; Channel</a></li>
+          <li><a href="promotions-packages.html">Promotions &amp; Packages</a></li>
+          <li><a href="upselling-cross-selling.html">Upsell &amp; Cross-Sell</a></li>
+          <li><a href="ancillary-services.html">Ancillary Services</a></li>
+          <li><a href="loyalty-retention.html">Loyalty &amp; Retention</a></li>
+          <li><a href="analytics-reporting.html">Analytics &amp; Reporting</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero" style="background-image:
-    linear-gradient(rgba(27,38,44,0.7),rgba(27,38,44,0.7)),
+    linear-gradient(rgba(27,38,44,0.7), rgba(27,38,44,0.7)),
     url('Stuff.png');">
     <div class="hero-text">
       <h2>Ancillary Services</h2>
     </div>
   </section>
 
+  <!-- Page Header / Breadcrumb -->
+  <div class="page-header">
+    <h1>Ancillary Services</h1>
+    <nav>
+      <a href="index.html">Home</a> &raquo; 
+      <span>Ancillary Services</span>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
   <main class="container">
-    <article>
+    <div class="content-box">
       <h3>Overview</h3>
       <p>
-        Increase per-guest spend by offering spa treatments, airport transfers, local tours, and F&B experiences, all bookable before or during the stay.
+        Boost per-guest spend by offering spa treatments, transportation, event spaces, and bespoke local experiences—all bookable before or during the stay.
       </p>
-    </article>
-    <article>
+    </div>
+
+    <div class="content-box">
       <h3>Impact So Far</h3>
       <ul>
         <li>20% lift in spa booking revenue</li>
         <li>15% of guests purchasing excursion packages</li>
         <li>7% increase in transport service attach rate</li>
       </ul>
-    </article>
-    <article>
+    </div>
+
+    <div class="content-box">
       <h3>Metrics Tracked</h3>
       <ul>
         <li>Ancillary Revenue per Booking</li>
@@ -60,14 +76,49 @@
         <li>Package Redemption Rate</li>
         <li>Guest Satisfaction Score</li>
       </ul>
-    </article>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container footer-container">
-      <!-- same footer -->
+      <div class="footer-block">
+        <h4>RevMaxPro</h4>
+        <p>123 Hospitality Way<br/>Mumbai, India</p>
+        <p>Email: support@revmaxpro.com<br/>Phone: +91-22-1234-5678</p>
+      </div>
+      <div class="footer-block">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="dynamic-pricing.html">Dynamic Pricing</a></li>
+          <li><a href="demand-forecasting.html">Demand Forecasting</a></li>
+          <li><a href="inventory-overbooking.html">Inventory &amp; Overbooking</a></li>
+          <li><a href="analytics-reporting.html">Analytics &amp; Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>Follow Us</h4>
+        <p><a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+      </div>
     </div>
   </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.querySelectorAll('nav .nav-list a');
+    const navPanel  = document.querySelector('nav .nav-list');
+    window.addEventListener('scroll', () => navToggle.checked = false);
+    navLinks.forEach(l => l.addEventListener('click', () => navToggle.checked = false));
+    let startX = null;
+    navPanel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    navPanel.addEventListener('touchmove', e => {
+      if (startX !== null && e.touches[0].clientX - startX > 50) {
+        navToggle.checked = false;
+        startX = null;
+      }
+    });
+  </script>
 
 </body>
 </html>

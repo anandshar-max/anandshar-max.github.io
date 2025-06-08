@@ -2,72 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Loyalty & Retention • RevMaxPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loyalty &amp; Retention • RevMaxPro</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo">RevMaxPro</a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
-      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+      <label for="nav-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
       <nav>
         <ul class="nav-list">
-          <li><a href="dynamic-pricing.html">Pricing</a></li>
-          <li><a href="demand-forecasting.html">Forecast</a></li>
-          <li><a href="inventory-overbooking.html">Inventory</a></li>
-          <li><a href="distribution-channel-management.html">Distribution</a></li>
-          <li><a href="promotions-packages.html">Promos</a></li>
-          <li><a href="upselling-cross-selling.html">Upsell</a></li>
-          <li><a href="ancillary-services.html">Ancillary</a></li>
-          <li><a href="loyalty-retention.html">Loyalty</a></li>
-          <li><a href="analytics-reporting.html">Analytics</a></li>
+          <li><a href="dynamic-pricing.html">Dynamic Pricing</a></li>
+          <li><a href="demand-forecasting.html">Demand Forecasting</a></li>
+          <li><a href="inventory-overbooking.html">Inventory &amp; Overbooking</a></li>
+          <li><a href="distribution-channel-management.html">Distribution &amp; Channel</a></li>
+          <li><a href="promotions-packages.html">Promotions &amp; Packages</a></li>
+          <li><a href="upselling-cross-selling.html">Upsell &amp; Cross-Sell</a></li>
+          <li><a href="ancillary-services.html">Ancillary Services</a></li>
+          <li><a href="loyalty-retention.html">Loyalty &amp; Retention</a></li>
+          <li><a href="analytics-reporting.html">Analytics &amp; Reporting</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero" style="background-image:
-    linear-gradient(rgba(27,38,44,0.7),rgba(27,38,44,0.7)),
+    linear-gradient(rgba(27,38,44,0.7), rgba(27,38,44,0.7)),
     url('Loyalty.png');">
     <div class="hero-text">
-      <h2>Loyalty & Retention</h2>
+      <h2>Loyalty &amp; Retention</h2>
     </div>
   </section>
 
+  <!-- Page Header / Breadcrumb -->
+  <div class="page-header">
+    <h1>Loyalty &amp; Retention</h1>
+    <nav>
+      <a href="index.html">Home</a> &raquo; 
+      <span>Loyalty &amp; Retention</span>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
   <main class="container">
-    <article>
+    <div class="content-box">
       <h3>Overview</h3>
       <p>
-        Launch a tiered loyalty program offering points, exclusive rates, and member-only perks—driving repeat stays and direct booking loyalty.
+        Launch a tiered loyalty program offering points, exclusive member rates, and VIP perks to drive repeat stays and direct bookings. Personalize experiences with targeted rewards based on guest preferences.
       </p>
-    </article>
-    <article>
+    </div>
+
+    <div class="content-box">
       <h3>Impact So Far</h3>
       <ul>
-        <li>30% member repeat stay rate</li>
-        <li>20% of total bookings through loyalty channel</li>
-        <li>5% ADR premium on loyalty rates</li>
+        <li>30% repeat booking rate among loyalty members</li>
+        <li>20% of total bookings made through loyalty channels</li>
+        <li>5% ADR premium achieved on member-exclusive rates</li>
       </ul>
-    </article>
-    <article>
+    </div>
+
+    <div class="content-box">
       <h3>Metrics Tracked</h3>
       <ul>
-        <li>Membership Growth</li>
-        <li>Repeat Booking Rate</li>
+        <li>Membership Growth Rate</li>
+        <li>Repeat Booking Percentage</li>
         <li>Average Spend per Member</li>
-        <li>Churn Rate</li>
+        <li>Member Churn Rate</li>
       </ul>
-    </article>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container footer-container">
-      <!-- same footer -->
+      <div class="footer-block">
+        <h4>RevMaxPro</h4>
+        <p>123 Hospitality Way<br/>Mumbai, India</p>
+        <p>Email: support@revmaxpro.com<br/>Phone: +91-22-1234-5678</p>
+      </div>
+      <div class="footer-block">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="dynamic-pricing.html">Dynamic Pricing</a></li>
+          <li><a href="demand-forecasting.html">Demand Forecasting</a></li>
+          <li><a href="inventory-overbooking.html">Inventory &amp; Overbooking</a></li>
+          <li><a href="analytics-reporting.html">Analytics &amp; Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>Follow Us</h4>
+        <p><a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+      </div>
     </div>
   </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.querySelectorAll('nav .nav-list a');
+    const navPanel  = document.querySelector('nav .nav-list');
+    window.addEventListener('scroll', () => navToggle.checked = false);
+    navLinks.forEach(l => l.addEventListener('click', () => navToggle.checked = false));
+    let startX = null;
+    navPanel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    navPanel.addEventListener('touchmove', e => {
+      if (startX !== null && e.touches[0].clientX - startX > 50) {
+        navToggle.checked = false;
+        startX = null;
+      }
+    });
+  </script>
 
 </body>
 </html>

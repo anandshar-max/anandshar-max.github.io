@@ -2,60 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Demand Forecasting • RevMaxPro</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo">RevMaxPro</a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
-      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+      <label for="nav-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
       <nav>
         <ul class="nav-list">
-          <li><a href="dynamic-pricing.html">Pricing</a></li>
-          <li><a href="demand-forecasting.html">Forecast</a></li>
-          <li><a href="inventory-overbooking.html">Inventory</a></li>
-          <li><a href="distribution-channel-management.html">Distribution</a></li>
-          <li><a href="promotions-packages.html">Promos</a></li>
-          <li><a href="upselling-cross-selling.html">Upsell</a></li>
-          <li><a href="ancillary-services.html">Ancillary</a></li>
-          <li><a href="loyalty-retention.html">Loyalty</a></li>
-          <li><a href="analytics-reporting.html">Analytics</a></li>
+          <li><a href="dynamic-pricing.html">Dynamic Pricing</a></li>
+          <li><a href="demand-forecasting.html">Demand Forecasting</a></li>
+          <li><a href="inventory-overbooking.html">Inventory &amp; Overbooking</a></li>
+          <li><a href="distribution-channel-management.html">Distribution &amp; Channel</a></li>
+          <li><a href="promotions-packages.html">Promotions &amp; Packages</a></li>
+          <li><a href="upselling-cross-selling.html">Upsell &amp; Cross-Sell</a></li>
+          <li><a href="ancillary-services.html">Ancillary Services</a></li>
+          <li><a href="loyalty-retention.html">Loyalty &amp; Retention</a></li>
+          <li><a href="analytics-reporting.html">Analytics &amp; Reporting</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero" style="background-image:
     linear-gradient(rgba(27,38,44,0.7),rgba(27,38,44,0.7)),
-    url('Demand Forecasting.png');">
+    url('Demand%20Forecasting.png');">
     <div class="hero-text">
       <h2>Demand Forecasting</h2>
     </div>
   </section>
 
-  <main class="container">
+  <!-- Page Header / Breadcrumb -->
+  <div class="page-header">
+    <h1>Demand Forecasting</h1>
+    <nav>
+      <a href="index.html">Home</a> &raquo; 
+      <span>Demand Forecasting</span>
+    </nav>
+  </div>
 
-    <article>
+  <!-- Main Content -->
+  <main class="container">
+    <div class="content-box">
       <h3>Overview</h3>
       <p>
-        Our Demand Forecasting engine uses historical booking patterns, seasonality curves, and local market intelligence to predict occupancy and revenue 30–90 days out.
+        Our Demand Forecasting engine uses historical booking patterns, seasonality curves, and market intelligence
+        to predict occupancy and revenue up to 90 days out. This empowers you to staff efficiently and set proactive pricing.
       </p>
-    </article>
+    </div>
 
-    <article>
+    <div class="content-box">
       <h3>Impact So Far</h3>
       <ul>
         <li>Forecast accuracy improved from 75% to 92%</li>
-        <li>Labor costs optimized by 10% via better staffing projections</li>
+        <li>Labor costs optimized by 10% through better staffing projections</li>
         <li>Inventory allocation aligned to predicted high-demand dates</li>
       </ul>
-    </article>
+    </div>
 
-    <article>
+    <div class="content-box">
       <h3>Metrics Tracked</h3>
       <ul>
         <li>Forecast Accuracy (%)</li>
@@ -63,13 +77,12 @@
         <li>Revenue vs. Forecast</li>
         <li>Staffing Efficiency</li>
       </ul>
-    </article>
-
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container footer-container">
-      <!-- same footer blocks as above -->
       <div class="footer-block">
         <h4>RevMaxPro</h4>
         <p>123 Hospitality Way<br/>Mumbai, India</p>
@@ -78,10 +91,10 @@
       <div class="footer-block">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#forecast">Forecast</a></li>
-          <li><a href="index.html#distribution">Distribution</a></li>
-          <li><a href="index.html#analytics">Analytics</a></li>
+          <li><a href="dynamic-pricing.html">Dynamic Pricing</a></li>
+          <li><a href="demand-forecasting.html">Demand Forecasting</a></li>
+          <li><a href="distribution-channel-management.html">Distribution &amp; Channel</a></li>
+          <li><a href="analytics-reporting.html">Analytics &amp; Reporting</a></li>
         </ul>
       </div>
       <div class="footer-block">
@@ -90,6 +103,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.querySelectorAll('nav .nav-list a');
+    const navPanel  = document.querySelector('nav .nav-list');
+    window.addEventListener('scroll', () => navToggle.checked = false);
+    navLinks.forEach(l => l.addEventListener('click', () => navToggle.checked = false));
+    let startX = null;
+    navPanel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    navPanel.addEventListener('touchmove', e => {
+      if (startX !== null && e.touches[0].clientX - startX > 50) {
+        navToggle.checked = false;
+        startX = null;
+      }
+    });
+  </script>
 
 </body>
 </html>
